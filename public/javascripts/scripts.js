@@ -109,7 +109,6 @@ function setupMap(center) {
 fetch("/data").then((res) => res.json()).then((data) => {
     dataMap = data;
     dataMap.forEach((location) => {
-        console.log(location)
     var marker = new mapboxgl.Marker()
     .setLngLat([location.Longitude, location.Latitude])
     .setPopup(new mapboxgl.Popup({ offset: 30})

@@ -16,8 +16,6 @@ async function readFromXlsx() {
     });
   }
 
-  // Printing data
-  console.log(data);
   return data;
 }
 module.exports = readFromXlsx;
