@@ -4,7 +4,7 @@ const readFromXlsx = require("../utils/readFromXlsx");
 /* GET home page. */
 router.get("/", async (req, res, next) => {
   const data = await readFromXlsx();
-  res.render("index", { locals: { data } });
+  res.render("index");
 });
 
 router.get("/data", async (req, res, next) => {
