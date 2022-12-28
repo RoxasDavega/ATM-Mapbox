@@ -1,77 +1,27 @@
-// var ExcelToJSON = function() {
-
-//   this.parseExcel = function(file) {
-//     var reader = new FileReader();
-//     var file = '/data/atm.xlsx';
-//     reader.onload = function(e) {
-//       var data = e.target.result;
-//       var workbook = XLSX.read(data, {
-//         type: 'binary'
-//       });
-
-//       workbook.SheetNames.forEach(function(sheetName) {
-//         // Here is your object
-//         var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
-//         var json_object = JSON.stringify(XL_row_object);
-//         console.log(json_object);
-//       })
-//     };
-
-//     reader.onerror = function(ex) {
-//       console.log(ex);
-//     };
-
-//     reader.readAsBinaryString(file);
-//     console.log(reader);
-//   };
-// };
-// ExcelToJSON();
-
-// var request = new XMLHttpRequest();
-// // may be necessary to escape path string?
-// request.open("GET", "/data/atm.xlsx");
-// request.responseType = "arraybuffer";
-// request.onload = function () {
-//    // this.response should be `ArrayBuffer` of `.xlsx` file
-//    var file = new File(this.response, "atm.xlsx");
-//    // do stuff with `file`
-// };
-// request.send();\
-// var excel_file = excel.Workbooks.Open("./data/atm.xlsx");
-
-// function ImportFile() {
-//     var excelUrl = "./test.xlsx";
-
-//     var oReq = new XMLHttpRequest();
-//     oReq.open('get', excelUrl, true);
-//     oReq.responseType = 'blob';
-//     oReq.onload = function () {
-//         var blob = oReq.response;
-//         excelIO.open(blob, LoadSpread, function (message) {
-//             console.log(message);
-//         });
-//     };
-//     oReq.send(null);
-//   }
-//   function LoadSpread(json) {
-//     jsonData = json;
-//     workbook.fromJSON(json);
-
-//     workbook.setActiveSheet("Revenues (Sales)");
-//   }
 var dataMap = [];
-
-
-
+var markers = [];
+var dataBank = {};
+var kategori = [];
+var dataKategori;
+var checkboxes = [];
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYXppenJvc3lpZCIsImEiOiJjbGE2cmJzdXAwNjg4M3ZzMHN4MTR5OGt4In0.oXST-z4oqfBHGDi3eXXPUg";
 
-navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
-  enableHighAccuracy: true,
-});
+document.onreadystatechange = function () {
+  if (document.readyState == "complete") {
+    dataGeoJson();
+    
+    showCurrentLocation();
+  }
+};
+
+function showCurrentLocation() {
+  navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
+    enableHighAccuracy: true,
+  });
+}
 
 function successLocation(position) {
-  console.log(position);
   setupMap([position.coords.longitude, position.coords.latitude]);
 }
 
@@ -86,7 +36,7 @@ function setupMap(center) {
     center: center,
     zoom: 15,
   });
-  console.log(center);
+
   map.addControl(
     new mapboxgl.GeolocateControl({
       positionOptions: {
@@ -98,81 +48,120 @@ function setupMap(center) {
       showUserHeading: true,
     })
   );
-//   var marker = new mapboxgl.Marker()
-//     .setLngLat([110.36, -7.79])
-//     //.setLngLat([-7.79, 110.36])
-//     //.setLngLat([110, -7])
-//     .setPopup(new mapboxgl.Popup({offset:30}).setHTML("<h1>Hello World!</h1>"))
-    
-//     .addTo(map);
-//   console.log(marker);
-fetch("/data").then((res) => res.json()).then((data) => {
-    dataMap = data;
-    dataMap.forEach((location) => {
-    var marker = new mapboxgl.Marker()
-    .setLngLat([location.Longitude, location.Latitude])
-    .setPopup(new mapboxgl.Popup({ offset: 30})
-    .setHTML('<h4>' + location.Nama +'</h4>' + location.Alamat ))
-    .addTo(map);
-    })
-});
 
-  // map.on("load", () => {
-   
+  map.on("load", function () {
+    map.addSource("dataBank", {
+      type: "geojson",
+      data: dataBank,
+    });
 
-  //   // Add a circle layer
-  //   map.addLayer({
-  //     id: "circle",
-  //     type: "circle",
-  //     source: "points",
-  //     paint: {
-  //       "circle-color": "#4264fb",
-  //       "circle-radius": 8,
-  //       "circle-stroke-width": 2,
-  //       "circle-stroke-color": "#ffffff",
-  //     },
-  //   });
+    for (const x of dataBank.features) {
+      const el = document.createElement("div");
+      el.className = "marker";
+      el.style.backgroundColor = x.properties["marker-color"];
+      el.classList.add(x.properties.bank);
+      new mapboxgl.Marker(el)
+        .setLngLat(x.geometry.coordinates)
+        .setPopup(
+          new mapboxgl.Popup({ offset: 25 }) 
+            .setHTML(
+              `<h3>${x.properties.title}</h3><p>${x.properties.alamat}</p><p>[${x.geometry.coordinates}]</p>`
+            )
+        )
+        .addTo(map);
+    }
+    map.addLayer({
+      id: "dataBank",
+      source: "dataBank",
+      type: "circle",
+      paint: {
+        "circle-radius": 1,
+      },
+    });
+  });
 
-  //   // Center the map on the coordinates of any clicked circle from the 'circle' layer.
-  //   map.on("click", "circle", (e) => {
-  //     map.flyTo({
-  //       center: e.features[0].geometry.coordinates,
-  //     });
-  //   });
 
-  //   // Change the cursor to a pointer when the it enters a feature in the 'circle' layer.
-  //   map.on("mouseenter", "circle", () => {
-  //     map.getCanvas().style.cursor = "pointer";
-  //   });
-
-  //   // Change it back to a pointer when it leaves.
-  //   map.on("mouseleave", "circle", () => {
-  //     map.getCanvas().style.cursor = "";
-  //   });
-  // });
-  
   const nav = new mapboxgl.NavigationControl();
   map.addControl(nav);
   map.addControl(
     new MapboxDirections({
-    accessToken: mapboxgl.accessToken
+      accessToken: mapboxgl.accessToken,
     }),
-    'top-left'
-    );
+    "top-left"
+  );
 
-    var geoJson = {
-      type: "Bank",
-      features: dataMap,
-    }
-var origin = geoJson.features[0];
-var destination = geoJson.features[1];
-
-// = L.mapbox.directions({profile: 'mapbox.driving'})
-var directions = L.mapbox.directions();
-var directionsLayer = L.mapbox.directions.layer(directions).addTo(map);
-var directionsRoutesControl = L.mapbox.directions.routesControl('routes', directions).addTo(map);
-directions.setOrigin(origin).setDestination(destination).query();
-
-var myLayer = L.mapbox.featureLayer().addTo(map);
-myLayer.setGeoJSON(geoJson);
+  return map;
 }
+
+async function dataGeoJson() {
+  fetch("/geojson")
+    .then((res) => res.json())
+    .then((data) => {
+      dataBank = data;
+      return data;
+    })
+    .then(async (x) => {
+      getKategori(x);
+    });
+}
+
+async function getKategori(data) {
+  for (const x of data.features) {
+    const duplicate = kategori.includes(x.properties.bank);
+    if (!duplicate) {
+      kategori.push(x.properties.bank);
+    }
+  }
+  makeCheckboxes();
+}
+
+
+async function makeCheckboxes () {
+  var filters = document.getElementById("filters");
+ 
+  for (var x = 0; x < kategori.length; x++) {
+    var item = filters.appendChild(document.createElement("div"));
+    var checkbox = item.appendChild(document.createElement("input"));
+    var label = item.appendChild(document.createElement("label"));
+    var dot = item.appendChild(document.createElement("span"));
+    checkbox.type = "checkbox";
+    checkbox.id = kategori[x];
+    checkbox.checked = true;
+    label.innerHTML = kategori[x];
+    label.setAttribute("for", kategori[x]);
+    dot.className("dot");
+    dot.style.backgroundColor = 
+    checkbox.addEventListener("change", updateKategori);
+    checkboxes.push(checkbox);
+  }
+};
+
+function updateKategori() {
+  var enabled = [];
+  var disabled = [];
+  for (var i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      enabled.push(checkboxes[i].id);
+      show(checkboxes[i].id)
+    } else {
+      disabled.push(checkboxes[i].id);
+      hide(checkboxes[i].id)
+    }
+  }
+}
+
+function hide(x) {
+  let markers = document.getElementsByClassName(x);
+  for (let i = 0; i < markers.length; i++) {
+    markers[i].style.visibility = "hidden";
+  }
+}
+
+function show(x) {
+  let markers = document.getElementsByClassName(x);
+  for (let i = 0; i < markers.length; i++) {
+    markers[i].style.visibility = "visible";
+  }
+}
+
+

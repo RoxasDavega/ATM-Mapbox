@@ -1,8 +1,33 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+
+.marker {
+  background-color: white;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.mapboxgl-popup {
+  max-width: 200px;
+}
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+.filter-ui {
+  background: #fff;
+  position: absolute;
+  top: 200px;
+  right: 10px;
+  z-index: 100;
+  padding: 10px;
+  border-radius: 3px;
 }
 
-a {
-  color: #00B7FF;
+.dot {
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  display: inline-block;
 }

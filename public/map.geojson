@@ -1,0 +1,480 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Bank BRI ATM - INDOMARET BANYURADEN",
+                "alamat": "Jl. Godean No.15, Area Sawah, Banyuraden, Kec. Gamping, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55563",
+                "marker-color": "#424fff",
+                "marker-size": "medium",
+                "bank": "BRI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.33904491445037,
+                    -7.778811976479872
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM Mandiri Graha Tugu",
+                "alamat": "Jl. Jend. Sudirman No.5, Gowongan, Kec. Jetis, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55233",
+                "marker-color": "#ff2929",
+                "marker-size": "medium",
+                "bank": "Mandiri"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.3681352467197,
+                    -7.782802106050397
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM Mandiri Neo Malioboro",
+                "alamat": "Jl. Ps. Kembang No.17, Sosromenduran, Gedong Tengen, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55271",
+                "marker-color": "#ff2929",
+                "marker-size": "medium",
+                "bank": "Mandiri"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.36541105985452,
+                    -7.789992565687214
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM Mandiri Atmajaya",
+                "alamat": "Jl. Babarsari, Janti, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#ff2929",
+                "marker-size": "medium",
+                "bank": "Mandiri"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.41414338704993,
+                    -7.780427613394437
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM Mandiri Eastparc",
+                "alamat": "Jl. Kledokan Babarsari, Ngentak, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#ff2929",
+                "marker-size": "medium",
+                "bank": "Mandiri"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.408447,
+                    -7.781949
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "Jl. Laksda Adisucipto No.47, Demangan, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#ff2929",
+                "marker-size": "medium",
+                "bank": "Mandiri"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.390403,
+                    -7.782919
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM Mandiri UII",
+                "alamat": "Jl. Prawiro Kuat, Ngringin, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55283",
+                "marker-color": "#ff2929",
+                "marker-size": "medium",
+                "bank": "Mandiri"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.412296,
+                    -7.760119
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM Mandiri Colombo",
+                "alamat": "Jl. Colombo Yogyakarta, Karang Malang, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#ff2929",
+                "marker-size": "medium",
+                "bank": "Mandiri"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.381267,
+                    -7.776624
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM Mandiri Mirota Gejayan",
+                "alamat": "Jl. Affandi No.43, Santren, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#ff2929",
+                "marker-size": "medium",
+                "bank": "Mandiri"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.390687,
+                    -7.76932
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM Mandiri UGM",
+                "alamat": " Jl. Persatuan, Sendowo, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#ff2929",
+                "marker-size": "medium",
+                "bank": "Mandiri"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.37508,
+                    -7.773507
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM Mandiri SPBU Tajem",
+                "alamat": "Jl. Raya Tajem No.21, Meguwo, Maguwoharjo, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#ff2929",
+                "marker-size": "medium",
+                "bank": "Mandiri"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.431923,
+                    -7.766143
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM Mandiri Timoho",
+                "alamat": "Indomaret, Jl. Timoho, Baciro, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55225",
+                "marker-color": "#ff2929",
+                "marker-size": "medium",
+                "bank": "Mandiri"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.393517,
+                    -7.790139
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM Mandiri Bethesda",
+                "alamat": "Jl. Jend. Sudirman No.70, Kotabaru, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55224",
+                "marker-color": "#ff2929",
+                "marker-size": "medium",
+                "bank": "Mandiri"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.378924,
+                    -7.783105
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM BRI",
+                "alamat": "Jl. Nologaten No.326, Ambarukmo, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#424fff",
+                "marker-size": "medium",
+                "bank": "BRI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.399972058186,
+                    -7.780735006929831
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM BRI Kompleks AU Maguwo",
+                "alamat": "6C88+FFW, Jl. Santan, Karang Janbe, Maguwoharjo, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#424fff",
+                "marker-size": "medium",
+                "bank": "BRI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.41620345408256,
+                    -7.783613386672556
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM BRI",
+                "alamat": "Jl. Babarsari, Tambak Bayan, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#424fff",
+                "marker-size": "medium",
+                "bank": "BRI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.4127944659848,
+                    -7.7741311953001
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM BRI",
+                "alamat": "Jl. Perumnas, Dabag, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55283",
+                "marker-color": "#424fff",
+                "marker-size": "medium",
+                "bank": "BRI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.40465149616017,
+                    -7.7729489959445175
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM BNI Graha Strategic",
+                "alamat": "Graha Strategic, Jalan Perumnas, Catur Tunggal, Depok, Dabag, Condongcatur, Sleman, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#3bf783",
+                "marker-size": "medium",
+                "bank": "BNI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.40474354729326,
+                    -7.772951416969434
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM BNI Emdi House",
+                "alamat": "Jalan Seturan Raya, Condongcatur, Depok, Kledokan, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#3bf783",
+                "marker-size": "medium",
+                "bank": "BNI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.40596181353413,
+                    -7.771577991070984
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM BNI CITROULI 2",
+                "alamat": "Jl. Seturan Raya Jl. Raya Kledokan, Kledokan, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#3bf783",
+                "marker-size": "medium",
+                "bank": "BNI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.40917920857646,
+                    -7.7732467432575305
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM BNI INDOMARET NOLOGATEN",
+                "alamat": "Jl. Nologaten No.15, Tempel, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#3bf783",
+                "marker-size": "medium",
+                "bank": "BNI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.40012294084943,
+                    -7.778868879968428
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM BNI Kcp UPN VETERAN",
+                "alamat": "Jl. Ring Road Utara, Ngropoh, Condongcatur, Sleman, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#3bf783",
+                "marker-size": "medium",
+                "bank": "BNI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.4115589254572,
+                    -7.762988490903794
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM BNI Plaza UNY",
+                "alamat": "Jl. Affandi No.168, Santren, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281",
+                "marker-color": "#3bf783",
+                "marker-size": "medium",
+                "bank": "BNI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.3889739897549,
+                    -7.774849234324776
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM BNI Drive Thru",
+                "alamat": "Jl. Affandi No.35, Mrican, Klitren, Kec. Gondokusuman, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55222",
+                "marker-color": "#3bf783",
+                "marker-size": "medium",
+                "bank": "BNI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.38819465809075,
+                    -7.779627750591473
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM BNI Galeria Mall",
+                "alamat": "Jl. Jend. Sudirman No.99-101, Terban, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55223",
+                "marker-color": "#3bf783",
+                "marker-size": "medium",
+                "bank": "BNI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.37908828058687,
+                    -7.782750403005082
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM BRI Drive Thru",
+                "alamat": "Jl. Urip Sumoharjo No.103, Klitren, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55222",
+                "marker-color": "#424fff",
+                "marker-size": "medium",
+                "bank": "BRI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.38360579079165,
+                    -7.782805821315634
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM BRI",
+                "alamat": "Panti Rapih Hospital, Jl. Cik Di Tiro No.30, Sagan, Caturtunggal, Depok, Yogyakarta City, Special Region of Yogyakarta 55223",
+                "marker-color": "#424fff",
+                "marker-size": "medium",
+                "bank": "BRI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.37624548173687,
+                    -7.776448458484026
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "title": "ATM BRI",
+                "alamat": "Jl. A.M. Sangaji No.15, Cokrodiningratan, Kec. Jetis, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55233",
+                "marker-color": "#424fff",
+                "marker-size": "medium",
+                "bank": "BRI"
+            },
+            "geometry": {
+                "coordinates": [
+                    110.36730341391348,
+                    -7.781762502282319
+                ],
+                "type": "Point"
+            }
+        }
+    ]
+}
