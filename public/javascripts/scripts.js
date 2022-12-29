@@ -2,6 +2,7 @@ var dataMap = [];
 var markers = [];
 var dataBank = {};
 var kategori = [];
+var colorCategory = [];
 var dataKategori;
 var checkboxes = [];
 mapboxgl.accessToken =
@@ -110,6 +111,7 @@ async function getKategori(data) {
     const duplicate = kategori.includes(x.properties.bank);
     if (!duplicate) {
       kategori.push(x.properties.bank);
+      colorCategory.push(x.properties["marker-color"])
     }
   }
   makeCheckboxes();
@@ -123,28 +125,29 @@ async function makeCheckboxes () {
     var item = filters.appendChild(document.createElement("div"));
     var checkbox = item.appendChild(document.createElement("input"));
     var label = item.appendChild(document.createElement("label"));
-    var dot = item.appendChild(document.createElement("span"));
+    var dot = item.appendChild(document.createElement("label"));
+    item.className = "label-checkbox"
     checkbox.type = "checkbox";
     checkbox.id = kategori[x];
     checkbox.checked = true;
     label.innerHTML = kategori[x];
     label.setAttribute("for", kategori[x]);
-    dot.className("dot");
-    dot.style.backgroundColor = 
+    label.className = "label-kategori";
+    dot.className = "dot";
+    dot.style.backgroundColor = colorCategory[x];
+    dot.style.marginRight = 0;
+
     checkbox.addEventListener("change", updateKategori);
     checkboxes.push(checkbox);
   }
 };
 
 function updateKategori() {
-  var enabled = [];
-  var disabled = [];
   for (var i = 0; i < checkboxes.length; i++) {
     if (checkboxes[i].checked) {
-      enabled.push(checkboxes[i].id);
+      
       show(checkboxes[i].id)
     } else {
-      disabled.push(checkboxes[i].id);
       hide(checkboxes[i].id)
     }
   }
@@ -155,6 +158,7 @@ function hide(x) {
   for (let i = 0; i < markers.length; i++) {
     markers[i].style.visibility = "hidden";
   }
+ 
 }
 
 function show(x) {
