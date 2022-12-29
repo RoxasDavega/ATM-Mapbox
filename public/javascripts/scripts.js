@@ -5,13 +5,13 @@ var kategori = [];
 var colorCategory = [];
 var dataKategori;
 var checkboxes = [];
+
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYXppenJvc3lpZCIsImEiOiJjbGE2cmJzdXAwNjg4M3ZzMHN4MTR5OGt4In0.oXST-z4oqfBHGDi3eXXPUg";
 
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     dataGeoJson();
-    
     showCurrentLocation();
   }
 };
@@ -27,13 +27,13 @@ function successLocation(position) {
 }
 
 function errorLocation() {
-  setupMap([-7.79, 110.36]);
+  setupMap([110.3750, -7.7830]);
 }
 
 function setupMap(center) {
   const map = new mapboxgl.Map({
-    container: "map", // container ID
-    style: "mapbox://styles/mapbox/streets-v12", // style URL
+    container: "map", 
+    style: "mapbox://styles/mapbox/streets-v12",
     center: center,
     zoom: 15,
   });
@@ -43,9 +43,7 @@ function setupMap(center) {
       positionOptions: {
         enableHighAccuracy: true,
       },
-      // When active the map will receive updates to the device's location as it changes.
       trackUserLocation: true,
-      // Draw an arrow next to the location dot to indicate which direction the device is heading.
       showUserHeading: true,
     })
   );
@@ -145,7 +143,6 @@ async function makeCheckboxes () {
 function updateKategori() {
   for (var i = 0; i < checkboxes.length; i++) {
     if (checkboxes[i].checked) {
-      
       show(checkboxes[i].id)
     } else {
       hide(checkboxes[i].id)

@@ -1,4 +1,11 @@
+body {
+  margin: 0;
+}
 
+#map {
+  height: 100vh;
+  width: 100vw;
+}
 
 .marker {
   background-color: white;
@@ -8,13 +15,16 @@
   border-radius: 50%;
   cursor: pointer;
 }
+
 .mapboxgl-popup {
   max-width: 200px;
 }
+
 .mapboxgl-popup-content {
   text-align: center;
   font-family: "Open Sans", sans-serif;
 }
+
 .filter-ui {
   background: #fff;
   position: absolute;
